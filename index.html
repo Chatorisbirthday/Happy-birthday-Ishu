@@ -76,78 +76,41 @@
 
 <script>
 
-document.getElementById("surpriseBtn").onclick = function() {
+<script>
 
-    document.getElementById("opening").style.display = "none";
+document.getElementById("surpriseBtn").onclick = function(){
 
-    document.getElementById("birthday").style.display = "block";
+    document.getElementById("opening").style.display="none";
 
-    startTyping();
+    let birthday = document.getElementById("birthday");
+
+    birthday.style.display="block";
+
+    setTimeout(()=>{
+        birthday.classList.add("show");
+    },100);
+
 
     createHearts();
 
 };
 
 
-function startTyping(){
-
-    let text = "May this day bring you endless happiness, beautiful memories and everything your heart wishes for ❤️";
-
-    let i = 0;
-
-    let speed = 50;
-
-    let element = document.getElementById("typing");
-
-
-    function type(){
-
-        if(i < text.length){
-
-            element.innerHTML += text.charAt(i);
-
-            i++;
-
-            setTimeout(type, speed);
-
-        }
-
-    }
-
-    type();
-
-}
-
-
-
 function createHearts(){
 
-    for(let i = 0; i < 50; i++){
+    for(let i=0;i<40;i++){
 
-        let heart = document.createElement("div");
+        let heart=document.createElement("div");
 
-        heart.innerHTML = "❤️";
+        heart.innerHTML="❤️";
 
-        heart.style.position = "fixed";
-        heart.style.left = Math.random()*100 + "vw";
-        heart.style.bottom = "0";
-        heart.style.fontSize = "25px";
-        heart.style.zIndex = "999";
+        heart.className="heart";
 
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.fontSize=(15+Math.random()*25)+"px";
 
         document.body.appendChild(heart);
-
-
-        heart.animate(
-            [
-                {transform:"translateY(0)", opacity:1},
-                {transform:"translateY(-100vh)", opacity:0}
-            ],
-            {
-                duration:5000,
-                easing:"linear"
-            }
-        );
 
 
         setTimeout(()=>{
@@ -159,8 +122,6 @@ function createHearts(){
 }
 
 </script>
-};
-</script>
 
-</body>
-</html>
+
+        
