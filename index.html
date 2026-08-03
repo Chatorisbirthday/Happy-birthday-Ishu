@@ -77,16 +77,19 @@
 
 <script>
 
-const button = document.getElementById("surpriseBtn");
+document.getElementById("surpriseBtn").onclick = function(){
 
-button.addEventListener("click", function(){
+    document.getElementById("opening").style.display = "none";
 
-    alert("Button is working ❤️");
+    let birthday = document.getElementById("birthday");
 
-});
+    birthday.style.display = "block";
+
+    setTimeout(function(){
+        birthday.classList.add("show");
+    },100);
+
+};
 
 </script>
-
-
-
         
