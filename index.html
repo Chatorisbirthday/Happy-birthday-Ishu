@@ -20,7 +20,7 @@
 
         <h1>Something Beautiful<br>is Waiting For You ❤️</h1>
 
-        <button onclick="openSurprise()">Open Your Surprise 🎁</button>
+        <button id="surpriseBtn">Open Your Surprise 🎁</button>
 
     </section>
 
@@ -74,7 +74,12 @@
 </div>
 
 
-<script src="script.js"></script>
+<script>
+document.getElementById("surpriseBtn").onclick = function() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("birthday").style.display = "block";
+};
+</script>
 
 </body>
 </html>
