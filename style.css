@@ -60,7 +60,15 @@ button {
 
 button:hover {
     transform: scale(1.1);
+}
 
+
+/* Birthday Section */
+
+.birthday {
+    display: none;
+    text-align: center;
+    animation: reveal 1.5s;
 }
 
 .title {
@@ -172,6 +180,17 @@ button:hover {
 
 }
 
+#birthday {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 1.5s ease;
+}
+
+#birthday.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .heart {
     position: fixed;
     bottom: 0;
@@ -190,14 +209,13 @@ button:hover {
     }
 }
 
- .birthday {
-    display: none;
-    text-align: center;
+ #birthday {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 1.5s ease;
 }
 
-.birthday.show {
-    display: block;
+#birthday.show {
     opacity: 1;
     transform: scale(1);
-}
 }
