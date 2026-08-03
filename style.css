@@ -179,3 +179,32 @@ button:hover {
     }
 
 }
+
+#birthday {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 1.5s ease;
+}
+
+#birthday.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heart {
+    position: fixed;
+    bottom: 0;
+    animation: heartMove 5s linear forwards;
+    z-index: 999;
+}
+
+@keyframes heartMove {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
