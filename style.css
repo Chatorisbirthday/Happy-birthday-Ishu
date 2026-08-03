@@ -2,77 +2,120 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    background: linear-gradient(135deg, #ff758c, #ffb199);
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
     padding: 20px;
 }
 
 .container {
     width: 100%;
     max-width: 900px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 25px;
-    padding: 30px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-h1 {
-    color: #e91e63;
+.intro {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s;
+}
+
+.intro h1 {
     font-size: 45px;
-    margin-bottom: 20px;
+    color: #e91e63;
 }
 
-.message {
-    color: #444;
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
+.intro p {
+    margin: 20px;
+    font-size: 20px;
+    color: #555;
 }
 
 button {
-    margin-top: 30px;
-    padding: 14px 35px;
-    border: none;
-    border-radius: 30px;
     background: #e91e63;
     color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 40px;
     font-size: 18px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #c2185b;
+    transform: scale(1.05);
 }
 
-#surprise {
+#surpriseBox {
+    display: none;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 25px;
     margin-top: 20px;
+    animation: reveal 1.5s;
+}
+
+#surpriseBox h1 {
     color: #e91e63;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 45px;
+}
+
+.message {
+    margin: 25px 0;
+    color: #444;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.08) rotate(2deg);
+}
+
+h2 {
+    margin-top: 30px;
+    color: #e91e63;
+}
+
+@keyframes reveal {
+    from {
+        opacity:0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
 }
