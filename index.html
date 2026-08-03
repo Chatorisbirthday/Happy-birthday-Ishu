@@ -75,21 +75,15 @@
 
 
 
+
 <script>
 
 document.getElementById("surpriseBtn").onclick = function(){
 
-    document.getElementById("opening").style.display = "none";
+    alert(document.getElementById("opening"));
 
-    let birthday = document.getElementById("birthday");
-
-    birthday.style.display = "block";
-
-    setTimeout(function(){
-        birthday.classList.add("show");
-    },100);
+    alert(document.getElementById("birthday"));
 
 };
 
 </script>
-        
