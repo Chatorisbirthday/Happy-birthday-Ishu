@@ -3,35 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Birthday Surprise ❤️</title>
+<title>A Special Surprise ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="hearts"></div>
+<div class="stars"></div>
 
 <div class="container">
 
-    <div class="intro">
-        <h1>Hey You ❤️</h1>
-        <p>A small surprise waiting for you...</p>
-        <button onclick="openSurprise()">Open Surprise 🎁</button>
-    </div>
+    <!-- Opening Screen -->
+    <section class="opening" id="opening">
+
+        <p class="small-text">A little surprise for someone special ✨</p>
+
+        <h1>Something Beautiful<br>is Waiting For You ❤️</h1>
+
+        <button onclick="openSurprise()">Open Your Surprise 🎁</button>
+
+    </section>
 
 
-    <div id="surpriseBox">
+    <!-- Birthday Reveal -->
+    <section class="birthday" id="birthday">
 
-        <h1>Happy Birthday ❤️🎂</h1>
+        <h1 class="title">Happy Birthday ❤️🎂</h1>
 
-        <p class="message">
-        Today is special because it's the day you came into this world. ❤️<br><br>
-        Thank you for all the smiles, memories and beautiful moments.<br>
-        May your life always be filled with happiness, success and endless love. ✨
-        </p>
+        <p class="typing" id="typing"></p>
 
+
+        <!-- Letter -->
+        <div class="letter">
+
+            <h2>💌 A Little Message</h2>
+
+            <p>
+            On this special day, I just want to remind you how amazing you are. ❤️<br><br>
+
+            Thank you for all the smiles, memories and moments that make life beautiful.
+            May your journey always be filled with happiness, success and endless reasons to smile. ✨
+            </p>
+
+        </div>
+
+
+        <!-- Photos -->
+        <h2 class="memory-title">Our Beautiful Memories 📸</h2>
 
         <div class="gallery">
+
             <img src="1785749874545.jpg">
             <img src="1785749874565.jpg">
             <img src="1785749874586.jpg">
@@ -40,13 +61,18 @@
             <img src="1785749874647.jpg">
             <img src="1785749874668.jpg">
             <img src="IMG_20260803_151612.jpg">
+
         </div>
 
-        <h2>❤️ A Beautiful Memory Collection ❤️</h2>
 
-    </div>
+        <h2 class="ending">
+        ❤️ Keep Smiling, Keep Shining ❤️
+        </h2>
+
+    </section>
 
 </div>
+
 
 <script src="./script.js"></script>
 
