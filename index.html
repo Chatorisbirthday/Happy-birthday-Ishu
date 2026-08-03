@@ -74,54 +74,19 @@
 </div>
 
 
-<script>
 
 <script>
 
-document.getElementById("surpriseBtn").onclick = function(){
+const button = document.getElementById("surpriseBtn");
 
-    document.getElementById("opening").style.display="none";
+button.addEventListener("click", function(){
 
-    let birthday = document.getElementById("birthday");
+    alert("Button is working ❤️");
 
-    birthday.style.display="block";
-
-    setTimeout(()=>{
-        birthday.classList.add("show");
-    },100);
-
-
-    createHearts();
-
-};
-
-
-function createHearts(){
-
-    for(let i=0;i<40;i++){
-
-        let heart=document.createElement("div");
-
-        heart.innerHTML="❤️";
-
-        heart.className="heart";
-
-        heart.style.left=Math.random()*100+"vw";
-
-        heart.style.fontSize=(15+Math.random()*25)+"px";
-
-        document.body.appendChild(heart);
-
-
-        setTimeout(()=>{
-            heart.remove();
-        },5000);
-
-    }
-
-}
+});
 
 </script>
+
 
 
         
